@@ -12,7 +12,11 @@
     //Nomor 2
     $tahun = 2000;
 
-    if ($tahun % 4 == 0) {
+    if ($tahun % 400 == 0) {
+        echo " Tahun Kabisat <br>";
+    } else if ($y % 100 == 0) {
+        echo "Bukan Tahun Kabisat <br>";
+    }else if ($tahun % 4 == 0) {
         echo " Tahun Kabisat <br>";
     } else {
     echo " Bukan Tahun Kabisat <br> ";
