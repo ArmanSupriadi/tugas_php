@@ -14,7 +14,7 @@
 
     if ($tahun % 400 == 0) {
         echo " Tahun Kabisat <br>";
-    } else if ($y % 100 == 0) {
+    } else if ($tahun % 100 == 0) {
         echo "Bukan Tahun Kabisat <br>";
     }else if ($tahun % 4 == 0) {
         echo " Tahun Kabisat <br>";
