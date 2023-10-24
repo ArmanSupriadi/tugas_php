@@ -26,21 +26,22 @@
             <td>Kelas</td>
         </tr>
         <?php
-            $i =1;
-            for ($no = 1, $nm=1, $kls=10; $nm<=10, $kls>=1  ; $nm++, $kls--) 
-            {
+            for ($no = 1, $nm=1, $kls=10; $nm<=10, $kls>=1  ; $nm++, $kls--){
+                if ($no % 2 == 0) {
+                echo "<tr style = 'background-color:white'>";
+                    echo "<td>$no</td>";
+                    echo "<td>Nama Ke .$nm</td>";
+                    echo "<td>Kelas .$kls</td>";
+                echo "</tr>";
+                }else {
+                    echo "<tr style = 'background-color:gray'>";
+                    echo "<td>$no</td>";
+                    echo "<td>Nama Ke .$nm</td>";
+                    echo "<td>Kelas .$kls</td>";
+                echo "</tr>";
+                }
         ?>
-        <?php 
-        $colorgenap="#fff";
-        $colorganjil="#ccc";
-        if ($i % 2 == 1) { $color = $colorganjil;
-        } else $color = $colorganjil;
-        ?>
-        <tr>
-            <td><?php echo $no; ?></td>
-            <td><?php echo "Nama Ke ".$nm; ?></td>
-            <td><?php echo "Kelas ".$kls; ?></td>
-        </tr>
+
         <?php 
            $no++; }
         ?>
