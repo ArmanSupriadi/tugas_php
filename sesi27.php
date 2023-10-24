@@ -30,14 +30,14 @@
                 if ($no % 2 == 0) {
                 echo "<tr style = 'background-color:white'>";
                     echo "<td>$no</td>";
-                    echo "<td>Nama Ke .$nm</td>";
-                    echo "<td>Kelas .$kls</td>";
+                    echo "<td>Nama Ke $nm</td>";
+                    echo "<td>Kelas $kls</td>";
                 echo "</tr>";
                 }else {
                     echo "<tr style = 'background-color:gray'>";
                     echo "<td>$no</td>";
-                    echo "<td>Nama Ke .$nm</td>";
-                    echo "<td>Kelas .$kls</td>";
+                    echo "<td>Nama Ke $nm</td>";
+                    echo "<td>Kelas $kls</td>";
                 echo "</tr>";
                 }
         ?>
