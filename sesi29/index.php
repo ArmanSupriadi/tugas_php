@@ -17,10 +17,20 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center  mb-5 mt-5">
-                <a href="index.php">Data Anggota</a>|
-                <a href="buku.php">Data Buku</a>|
-                <a href="pengarang.php">Data Pengarang</a>|
-                <a href="penerbit.php">Data Penerbit</a>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.php">Data Anggota</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="buku.php">Data Buku</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pengarang.php">Data Pengarang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="penerbit.php">Data Penerbit</a>
+                    </li>
+                </ul>
             </div>
             <div class="col-md-12">
                 <h3>Data Anggota</h3>
