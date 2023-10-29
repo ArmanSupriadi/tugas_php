@@ -1,6 +1,6 @@
 <?php 
     include "config.php";
-    $query = mysqli_query($con, "SELECT * FROM anggota");
+    $query = mysqli_query($con, "SELECT id_penerbit, nama_penerbit, telp, alamat FROM penerbit");
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Anggota Perpustakaan</title>
+    <title>Data Penerbit</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
@@ -23,12 +23,14 @@
                 <a href="penerbit.php">Data Penerbit</a>
             </div>
             <div class="col-md-12">
-                <h3>Data Anggota</h3>
+                <h3>Data Penerbit</h3>
                     <table class="table table-striped" >
                         <tr>
                             <td width="50px">No</td>
-                            <td width="100px">Nama</td>
-                            <td width="100px">Username</td>
+                            <td width="100px">ID Penerbit</td>
+                            <td width="100px">Nama Penerbit</td>
+                            <td width="100px">Telepon</td>
+                            <td width="100px">Alamat</td>
                         </tr>
                         <?php if(mysqli_num_rows($query)>0) { ?>
                             <?php $no = 1;
@@ -36,8 +38,10 @@
                             ?>
                             <tr>
                                 <td><?php echo $no;?></td>
-                                <td><?php echo $data["nama"];?></td>
-                                <td><?php echo $data["username"];?></td>
+                                <td><?php echo $data["id_penerbit"];?></td>
+                                <td><?php echo $data["nama_penerbit"];?></td>
+                                <td><?php echo $data["telp"];?></td>
+                                <td><?php echo $data["alamat"];?></td>
                             </tr>
                         <?php $no++; }?>
                         <?php }  ?>
